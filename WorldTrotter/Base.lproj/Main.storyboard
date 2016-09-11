@@ -52,6 +52,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="UsU-4f-miC" firstAttribute="centerX" secondItem="F7U-wS-oDg" secondAttribute="centerX" id="8EQ-yq-i7X"/>
                             <constraint firstItem="F7U-wS-oDg" firstAttribute="top" secondItem="D6f-qR-oZE" secondAttribute="bottom" constant="8" id="J5f-cq-vTy"/>
@@ -66,12 +67,21 @@
                             <constraint firstItem="D6f-qR-oZE" firstAttribute="centerX" secondItem="F7U-wS-oDg" secondAttribute="centerX" id="wYo-2c-bhs"/>
                             <constraint firstItem="F7U-wS-oDg" firstAttribute="top" secondItem="D6f-qR-oZE" secondAttribute="bottom" constant="8" id="yRo-BE-gEt"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="S6b-ih-9gR" appends="YES" id="WW9-jW-wub"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="celsiusLabel" destination="NhE-gk-K9D" id="rsG-ez-fQY"/>
+                        <outlet property="fahrenheitField" destination="D6f-qR-oZE" id="968-nT-Y71"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="S6b-ih-9gR">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="aFq-HB-WJF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
