@@ -1,5 +1,4 @@
-
-
+#import <UIKit/UIKit.h>
 #import "ConversionViewController.h"
 
 @interface ConversionViewController ()
@@ -25,18 +24,33 @@
 }
 
 -(void)updateCelsiusLabel {
-    self.celsiusLabel.text = @(self.celsiusValue).stringValue;
+    self.celsiusLabel.text = [self.numberFormatter stringFromNumber:@(self.celsiusValue)];
 }
 
 - (IBAction)fahrenheitFieldEditingChanged:(UITextField *)textField {
-
-    double value = textField.text.doubleValue;
-    self.fahrenheitValue = value;
+    NSNumber *num = [self.numberFormatter numberFromString:textField.text];
+    if (num != nil) {
+        self.fahrenheitValue = num.doubleValue;
+    } else {
+        self.celsiusLabel.text = @"???";
+    }
 }
 
 - (IBAction)dismissKeyboard:(id)sender {
     [self.fahrenheitField resignFirstResponder];
 }
+
+-(NSNumberFormatter *)numberFormatter {
+    static NSNumberFormatter *formatter = nil;
+    if (formatter == nil) {
+        formatter = [NSNumberFormatter new];
+        formatter.numberStyle = NSNumberFormatterDecimalStyle;
+        formatter.minimumFractionDigits = 0;
+        formatter.maximumFractionDigits = 1;
+    }
+    return formatter;
+}
+
 
 -(void)viewDidLoad {
     
