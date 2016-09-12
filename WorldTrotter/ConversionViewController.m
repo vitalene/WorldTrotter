@@ -10,6 +10,13 @@
 
 @implementation ConversionViewController
 
+// MARK: - View Lifecycle
+
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    NSLog(@"Conversion View Controller loaded its view");
+}
+
 -(void)setFahrenheitValue:(double)fahrenheitValue {
     _fahrenheitValue = fahrenheitValue;
     [self updateCelsiusLabel];
@@ -67,8 +74,5 @@ replacementString:(NSString *)string {
     }
 }
 
--(void)viewDidLoad {
-    
-    
-}
+
 @end

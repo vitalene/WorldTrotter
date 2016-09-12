@@ -14,6 +14,7 @@
 		282F42211D84B0F600486C2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282F42201D84B0F600486C2F /* Assets.xcassets */; };
 		282F42241D84B0F600486C2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282F42221D84B0F600486C2F /* LaunchScreen.storyboard */; };
 		2897BE6E1D870B4000FD5B2E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2897BE6D1D870B4000FD5B2E /* MapKit.framework */; };
+		2897BE711D871E6400FD5B2E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2897BE701D871E6400FD5B2E /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		282F42231D84B0F600486C2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		282F42251D84B0F600486C2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2897BE6D1D870B4000FD5B2E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2897BE6F1D871E6400FD5B2E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		2897BE701D871E6400FD5B2E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				282F421A1D84B0F600486C2F /* ConversionViewController.h */,
 				282F421B1D84B0F600486C2F /* ConversionViewController.m */,
 				282F421D1D84B0F600486C2F /* Main.storyboard */,
+				2897BE6F1D871E6400FD5B2E /* MapViewController.h */,
+				2897BE701D871E6400FD5B2E /* MapViewController.m */,
 				282F42201D84B0F600486C2F /* Assets.xcassets */,
 				282F42221D84B0F600486C2F /* LaunchScreen.storyboard */,
 				282F42251D84B0F600486C2F /* Info.plist */,
@@ -165,6 +170,7 @@
 				282F421C1D84B0F600486C2F /* ConversionViewController.m in Sources */,
 				282F42191D84B0F600486C2F /* AppDelegate.m in Sources */,
 				282F42161D84B0F600486C2F /* main.m in Sources */,
+				2897BE711D871E6400FD5B2E /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

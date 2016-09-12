@@ -90,7 +90,7 @@
         <!--Map-->
         <scene sceneID="nBy-le-6AA">
             <objects>
-                <viewController id="sBE-oc-ESj" sceneMemberID="viewController">
+                <viewController id="sBE-oc-ESj" customClass="MapViewController" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="RPw-LP-m4k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
