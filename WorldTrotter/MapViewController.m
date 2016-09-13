@@ -23,7 +23,8 @@
     // Set it as *the* view of the view controller
     self.view = self.mapView;
     // Add a segmented control to the view
-    NSArray *segItems = @[@"Standard", @"Hybrid", @"Satellite"];
+    NSString *standardString = NSLocalizedString(@"Standard", @"Standard map view"); NSString *hybridString = NSLocalizedString(@"Hybrid", @"Hybrid map view");
+    NSString *satelliteString = NSLocalizedString(@"Satellite", @"Satellite map view"); NSArray *segItems = @[standardString, hybridString, satelliteString];
     UISegmentedControl *segControl = [[UISegmentedControl alloc] initWithItems:segItems];
     segControl.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:.5];
     segControl.selectedSegmentIndex = 0;
@@ -35,7 +36,7 @@
                    action:@selector(mapTypeChanged:)
          forControlEvents:UIControlEventValueChanged];
     
-
+    
     
     
     NSLayoutConstraint *topConstraint =
