@@ -62,8 +62,11 @@
 - (BOOL)textField:(UITextField *)textField
 shouldChangeCharactersInRange:(NSRange)range
 replacementString:(NSString *)string {
+
+    NSLocale *currentLocale = [NSLocale currentLocale];
+    NSString *decimalSeparator = [currentLocale objectForKey:NSLocaleDecimalSeparator];
     
-    NSRange existingRange    = [textField.text rangeOfString:@"."];
+    NSRange existingRange = [textField.text rangeOfString:decimalSeparator];
     BOOL hasExistingDecimalSeparator = (existingRange.location != NSNotFound);
     NSRange newRange = [string rangeOfString:@"."];
     BOOL wantsNewDecimalSeparator = (newRange.location != NSNotFound);
