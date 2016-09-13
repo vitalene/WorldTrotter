@@ -31,6 +31,13 @@
     segControl.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:segControl];
     
+    [segControl addTarget:self
+                   action:@selector(mapTypeChanged:)
+         forControlEvents:UIControlEventValueChanged];
+    
+
+    
+    
     NSLayoutConstraint *topConstraint =
     [segControl.topAnchor constraintEqualToAnchor:self.topLayoutGuide.bottomAnchor
                                          constant:8];
@@ -50,5 +57,21 @@
     [super viewDidLoad];
     NSLog(@"Map View Controller finished its view");
 }
+
+// MARK: - Actions
+
+- (void)mapTypeChanged:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            self.mapView.mapType = MKMapTypeStandard;
+            break;
+        case 1:
+            self.mapView.mapType = MKMapTypeHybrid;
+            break;
+        case 2:
+            self.mapView.mapType = MKMapTypeSatellite;
+        default:
+            break;
+    } }
 
 @end
